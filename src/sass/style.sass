@@ -1,0 +1,980 @@
+$main-color: #eae3d3
+$yellow-color: rgb(179, 145, 55)
+$green-color: rgb(188, 193, 48)
+$btn-color: rgb(240, 189, 50)
+$wrong-color: #f68f93
+$right-color: #9ee7a3
+
+@font-face
+    font-family: "Montserrat"
+    src: url("../fonts/Montserrat-Regular.ttf")
+    font-weight: 400
+    font-display: swap
+
+@font-face
+    font-family: "Montserrat"
+    src: url("../fonts/Montserrat-SemiBold.ttf")
+    font-weight: 600
+    font-display: swap
+
+@font-face
+    font-family: "Montserrat"
+    src: url("../fonts/Montserrat-Medium.ttf")
+    font-weight: 500
+    font-display: swap
+
+@font-face
+    font-family: "Montserrat"
+    src: url("../fonts/Montserrat-Light.ttf")
+    font-weight: 200
+    font-display: swap
+
+@font-face
+    font-family: "Montserrat"
+    src: url("../fonts/Montserrat-LightItalic.ttf")
+    font-weight: 200
+    font-style: italic
+    font-display: swap
+
+@keyframes animation-1
+    0%
+        transform: translateY(-700px)
+        opacity: 0.1
+    100%
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes animation-2
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes animation-3
+    0%
+        top: 100px
+        opacity: 0
+    100%
+        opacity: 1
+        top: 0
+
+*
+    margin: 0
+    padding: 0
+    list-style: none
+    font-size: 100%
+    border: 0
+    font: inherit
+    box-sizing: border-box
+    backface-visibility: hidden
+
+:root
+    font-family: "Montserrat"
+
+html
+    scroll-behavior: smooth
+
+body
+    background-color: $main-color
+
+// ссылки
+a
+    text-decoration: none
+    color: black
+
+// кнопка чата
+.chat
+    animation: animation-2 2s
+    background: linear-gradient(65deg, $yellow-color, $green-color)
+    border: 2px solid black
+    border-radius: 100%
+    height: 6rem
+    width: 6rem
+    position: fixed
+    z-index: 10
+    bottom: 5%
+    right: 5%
+    transition: all .3s
+    &::after
+        content: ""
+        position: absolute
+        border-radius: 100%
+        top: 0
+        left: 0
+        z-index: -1
+        height: 100%
+        width: 100%
+        background: inherit
+        transition: all .3s
+    &:hover
+        cursor: pointer
+        transform: translateY(-.5rem)
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .3)
+        &::after
+            opacity: 0
+            transform: scale(2)
+    &:active
+        transform: translateY(.1rem)
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .1)
+    img
+        width: 6rem
+
+// 1я секция
+.first-section
+    font-weight: 400
+    position: relative
+    overflow: hidden
+    animation: animation-1 2s
+    height: 750px
+    &::before 
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, rgba($yellow-color, 0.5), rgba($green-color, 0.5)), url(../img/London.webp) center/cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 98%, 0 86%)
+    &__container
+        display: flex
+        flex-direction: column
+        position: relative
+        z-index: 1
+        height: 90%
+    &__wrapper
+        opacity: 0
+        animation: animation-2 2s
+        animation-delay: 2.5s
+        animation-fill-mode: forwards
+        max-width: 324px
+        position: absolute
+        top: 30%
+        right: 10%
+        p
+            opacity: 0
+            animation: animation-2 2s
+            animation-delay: 3s
+            animation-fill-mode: forwards
+            margin-bottom: 10%
+        button
+            opacity: 0
+            animation: animation-3 1s
+            animation-delay: 3.5s
+            animation-fill-mode: forwards
+
+// кнопки
+.button
+    font-family: inherit
+    border-radius: 30px
+    border: 1px solid #393939
+    background-color: $btn-color
+    height: 3rem
+    width: 12rem
+    font-size: 1.1rem
+    transition: .3s
+    position: relative
+    &::before
+        content: ""
+        border-radius: 30px
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        background-color: $btn-color
+        width: 100%
+        height: 100%
+        transition: .3s
+    &:hover
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .3)
+        transform: translateY(-.25rem)
+        &::before
+            opacity: 0
+            transform: scale(2)
+    &:active
+        transform: translateY(0.1rem)
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .15)
+    &_prev-after
+        img
+            width: 5rem
+                
+
+// гамбургер
+.hamburger-wrapper
+    display: none
+
+// заголовки
+.title
+    letter-spacing: 0.1rem
+    font-weight: 600
+    font-size: 4rem
+    &_medium
+        font-size: 3.3rem
+    &_mini
+        font-size: 1.9rem
+
+// текст
+.text
+    font-size: 1.5rem
+    &_mini
+        font-weight: 200
+        font-size: 1.3rem
+    &_micro
+
+        font-size: 1rem
+
+// хедер
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__back
+        display: none
+    &__ul
+        font-size: 1.2rem
+        width: 24rem
+    img
+        width: 8rem
+        transition: .3s
+        &:hover
+            transform: scale(1.2) rotate(360deg)
+        &:active
+            transform: translateY(.3rem)
+
+ul
+    font-weight: 500
+    display: flex
+    justify-content: space-between
+    li
+        transition: .3s
+    li:hover
+        transform: rotate(5deg) scale(1.3)
+    li:active
+        transform: translateY(.2rem)
+
+// 2я секция
+.second-section
+    height: 850px
+    overflow: hidden
+    position: relative
+    z-index: 0
+    &__ref
+        font-weight: 400
+        color: rgb(19, 98, 138)
+        text-decoration: underline
+        transition: all .3s
+        background: linear-gradient(120deg, transparent 50%, rgb(19, 98, 138) 50%)
+        background-size: 210%
+        transition: .5s
+        &:hover
+            cursor: pointer
+            padding: .1rem .5rem
+            display: inline-block
+            transform: scale(1.05)
+            background-position: 100% 100%
+            color: $main-color
+    &__title
+        display: inline-block
+        color: transparent
+        background-clip: text
+        background-image: linear-gradient(45deg, $yellow-color, darken($green-color, 20%))
+        margin-bottom: 1.5rem
+    &__top-part, &__bottom-part
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__top-part
+        margin-bottom: 3rem
+    &__text-part
+        max-width: 50%
+    &__img-part
+        position: relative
+        width: 47%
+        height: 20rem
+        img
+            z-index: 3
+            position: relative
+            height: 15rem
+            border: 5px solid $main-color
+            border-radius: 10px
+            transition: all .2s
+            &:hover
+                box-shadow: 0 4px 4px rgba(0, 0, 0, .3)
+                z-index: 5
+                transform: scale(1.05) translateY(1.3rem)
+                outline: 7px solid $yellow-color
+                border: none
+                outline-offset: .6rem
+            &:nth-child(1)
+                top: 0
+                left: 0
+            &:nth-child(2)
+                position: absolute
+                right: 0
+                bottom: 0
+
+    &__bottom-part
+        flex-direction: row-reverse
+        &__text-part
+            text-align: right
+            h2
+                background-image: linear-gradient(45deg, rgba(180, 75, 228, 0.795), darken($green-color, 10%))
+                font-size: 3rem
+        &__img-part
+            img
+                height: 100%
+                border: none
+                position: static
+
+// 3я секция
+.third-section
+    overflow: hidden
+    transform: skewY(4deg)
+    height: 800px
+    background: linear-gradient(90deg, rgba($yellow-color, 0.5), rgba($green-color, 0.5)), url(../img/London-back-2.webp) center/cover no-repeat
+    &__title
+        text-align: center
+    &__container
+        transform: skewY(-4deg)
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+    &__buttons
+        width: 100%
+        display: flex
+        justify-content: space-evenly
+        img
+            cursor: pointer
+            transition: all .2s
+            &:hover
+                transform: translateY(-.2rem)
+                filter: drop-shadow(0 6px 1px rgba(0, 0, 0, .3))
+            &:active
+                transform: translateY(.1rem)
+                filter: drop-shadow(0 4px 1px rgba(0, 0, 0, .15))
+
+// карточки с экскурсиями
+.cards
+    display: flex
+    justify-content: space-between
+    height: 60%
+    &-item
+        perspective: 1000px
+        border-radius: 20px
+        width: 30%
+        position: relative
+        &:nth-child(4), &:nth-child(5), &:nth-child(6)
+            display: none
+        &__button
+            background-color: rgb(255, 250, 196)
+            &::before
+                background-color: rgb(255, 250, 196)
+        &__side
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .3)
+            transition: all 1.2s
+            padding: 0 1rem 1rem
+            border-radius: 20px
+            background: $main-color
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            text-align: center
+            align-items: center
+            height: 100%
+            img
+                width: 3rem
+            &_back
+                background: linear-gradient(120deg, lighten($yellow-color, 20%), lighten($green-color, 10%))
+                transform: rotateY(180deg)
+                position: absolute
+                top: 0
+                width: 100%
+                height: 100%
+                h3
+                    font-weight: 500
+        &:hover &__side_front
+            transform: rotateY(-180deg)
+        &:hover &__side_back
+            transform: rotateY(0deg)
+
+// 4я секция
+.fourth-section
+    padding-top: 2rem
+    height: 950px
+    overflow: hidden
+    position: relative
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        height: 100%
+    &__title
+        text-align: center
+        padding-bottom: 2px
+        color: transparent
+        background-clip: text
+        background-image: linear-gradient(45deg, $yellow-color, darken($green-color, 20%))
+
+// карточки с экскурсоводами
+.guide-card
+    height: 85%
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-auto-rows: 1fr
+    column-gap: 1.8rem
+    row-gap: 2rem
+    &__item
+        border-radius: 20px
+        border: 2px solid darken($main-color, 40%)
+        background-color: darken($main-color, 5%)
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        text-align: center
+        grid-column-end: span 3
+        transition: .3s
+        &:hover
+            box-shadow: 0 8px 10px rgba(0, 0, 0, .3)
+            transform: translateY(-5%)
+    img
+        object-fit: cover
+        max-height: 60%
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%)
+    &__info
+        font-weight: 400
+        line-height: 1.2
+    &__title
+        color: darken($main-color, 60%)
+        font-weight: 500
+        font-size: 1.7rem
+
+// 5я секция
+.fifth-section
+    overflow: hidden
+    padding: 2rem 0
+    height: 1000px
+    background: linear-gradient(250deg, rgba($yellow-color, 0.5), rgba($green-color, 0.5)), url(../img/london-2.webp) center/cover 
+    no-repeat
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%)
+    &__container
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        height: 100%
+    &__title
+        text-align: right
+
+// отзывы
+.feedback
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .5)
+    transform: skewX(-4deg)
+    border: 2px solid darken($main-color, 40%)
+    background-color: darken($main-color, 5%)
+    height: 18%
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    border-radius: 20px
+    transition: all .5s
+    &:hover
+        transform: scale(1.05) skewX(-4deg)
+    &:hover img
+        filter: blur(4px) brightness(90%)
+        transform: scale(1)
+    &:hover figcaption
+        opacity: 1
+        transform: translate(-50%, -50%)
+    h3
+        color: darken($yellow-color, 30%)
+    &__img
+        position: relative
+        border-radius: 100%
+        border: 2px solid darken($yellow-color, 30%)
+        height: 80%
+        transform: skewX(4deg)
+        > *
+            transition: .5s
+        figcaption
+            position: absolute
+            font-weight: 500
+            text-align: center
+            top: 50%
+            left: 50%
+            transform: translate(-50%, 30%)
+            opacity: 0
+    img
+        transform: scale(1.1)
+        height: 100%
+        width: 100%
+        border-radius: 100%
+    &__text
+        height: 80%
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        max-width: 75%
+        text-align: right
+    
+.col-white
+    color: white
+
+// 6я секция
+.sixth-section
+    height: 800px
+    overflow: hidden
+    &__title
+        font-weight: 600
+        letter-spacing: 0.2rem
+        display: inline-block
+        color: transparent
+        background-clip: text
+        background-image: linear-gradient(225deg, darken($yellow-color, 10%), darken($green-color, 20%))
+    &__container
+        height: 100%
+    &__form-part
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+
+.form-part
+    padding: 0 3rem
+    background: linear-gradient(110deg, rgba(white, 0.9) 62%, rgba($yellow-color, 0.3) 50%), url(../img/london-ai.webp) center/cover no-repeat
+    width: 100%
+    height: 80%
+
+.form
+    height: 100%
+    width: 70%
+    input:not([type="radio"])
+        padding: 1rem
+        background-color: $main-color
+        border: 3px solid darken($main-color, 20%)
+        border-radius: 1rem
+        width: 60%
+        margin-bottom: .5rem
+        &:focus
+            outline: none
+            border: 3px solid darken($right-color, 30%)
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .2)
+            background-color: lighten($right-color, 15%)
+            &:invalid
+                border: 3px solid darken($wrong-color, 10%)
+                background-color: lighten($wrong-color, 15%)
+        &:placeholder-shown ~ label
+            opacity: 0
+            transform: translateY(.7rem)
+        ~ label
+            display: block
+            transition: all .3s
+            opacity: 1
+            transform: translateY(0rem)
+            padding-left: .8rem 
+    &__radios
+        width: 30rem
+        display: inline-flex
+        justify-content: space-between
+    &__radio
+        display: inline-flex
+        align-items: center
+        label
+            display: inline
+            // width: 100%
+        span
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            border-radius: 100%
+            border: 3px solid darken($main-color, 40%)
+            width: 1.3rem
+            height: 1.3rem
+            margin-right: .5rem
+            &::after
+                content: ""
+                display: inline-block
+                border-radius: 100%
+                width: .7rem
+                height: .7rem
+                background-color: darken($main-color, 40%)
+                opacity: 0
+        input:checked + span::after
+            opacity: 1
+        input
+            display: none
+        label
+            cursor: pointer
+
+.footer
+    background-color: lighten($yellow-color, 20%)
+    height: 200px
+    position: relative
+    z-index: 10
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+    &__text
+        position: absolute
+        left: 0
+        top: 20%
+        span
+            font-weight: 400
+        div:last-child
+            width: 90%
+    img
+        display: block
+        height: 9.3rem
+        transition: .3s
+        &:hover
+            transform: scale(1.2)
+    &__ul
+        font-size: 1.3rem
+        width: 40rem
+        a
+            color: #333333
+
+@media(max-width: 1199px)
+    // контейнер
+    .container
+        width: 960px
+    .second-section
+        height: 900px
+    .third-section
+        .cards-item
+            width: 32%
+            &__side
+                padding: 0
+
+
+@media(max-width: 991px)
+    // контейнер
+    .container
+        width: 720px
+    .second-section
+        height: 1350px
+        &__top-part, &__bottom-part
+            flex-direction: column
+        &__text-part
+            max-width: 100%
+            margin-bottom: 1.5rem
+        &__img-part
+            width: 90%
+        &__bottom-part
+            &__img-part
+                display: flex
+                justify-content: center
+
+    .third-section
+        .cards-item
+            width: 45%
+            &:nth-child(3)
+                display: none
+
+    .fourth-section
+        height: auto
+    .guide-card
+        margin: 2rem 0
+        &__item
+            grid-column-end: span 6
+
+    .fifth-section
+        height: 1200px
+
+    .feedback
+        height: 20%
+        &__img
+            height: 60%
+        // img
+        //     height: 100%
+
+    .sixth-section
+        &__title
+            font-size: 3rem
+    .form
+        width: 80%
+        input:not([type=radio])
+            width: 70%
+        &__radios
+            display: block
+            width: 100%
+        &__radio
+            display: block
+            &:not(:last-child)
+                margin-bottom: .5rem
+
+    .footer
+        a
+            align-self: end
+
+@media(max-width: 767px)
+    // контейнер
+    .container
+        width: 540px
+
+    // изменяем корневой шрифт
+    :root
+        font-size: 15px
+
+    // хедер
+    .header
+        &__back
+            display: block
+            background: radial-gradient($yellow-color, $green-color)
+            width: 5.5rem
+            height: 5.5rem
+            border-radius: 100%
+            position: absolute
+            z-index: 2
+            transition: .4s ease-out
+            &_active
+                position: fixed
+                border-bottom-right-radius: 20%
+                transform: scale(15)
+        &__ref
+            position: relative
+            left: 100%
+            transform: translateX(-100%)
+        // меняем список
+        &__ul
+            border: 5px solid black
+            background-image: url(../img/background-guide.webp)
+            border-radius: 50px
+            position: fixed
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            transition: .3s ease-out
+            font-size: 1.5rem
+            width: 0
+            height: 0
+            z-index: 3
+            top: 10%
+            left: -20%
+            opacity: 0
+            // показываем список
+            &_active
+                width: 70%
+                height: 70vh
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                opacity: 1
+                a
+                    background: linear-gradient(120deg, transparent 50%, darken($main-color, 10%) 50%)
+                    background-size: 230%
+                    transition: .3s
+                    font-size: 2rem
+                    &:hover, &:active
+                        background-position: 100% 100%
+
+    // гамбургер
+    .hamburger-wrapper
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 5.5rem
+        height: 5.5rem
+        border-radius: 100%
+        background-color: darken($main-color, 10%)
+        position: fixed
+        z-index: 4
+    .hamburger
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 3.5rem
+        height: 2rem
+        div
+            border-radius: 10px
+            transition: all .5s
+            width: 3.5rem
+            height: .3rem
+            background-color: black
+        // крестик
+        &_active
+            top: -2px
+            justify-content: center
+            div
+                position: absolute
+                &:nth-child(1)
+                    margin: 0
+                    transform: rotate(-45deg)
+                &:nth-child(2)
+                    margin: 0
+                    transform: rotate(45deg)
+                &:nth-child(3)
+                    display: none
+
+    .third-section
+        .cards
+            justify-content: center
+        .cards-item
+            width: 25rem
+            line-height: 1.2
+            img
+                width: 6rem
+            &:nth-child(2)
+                display: none
+
+    .fourth-section
+        height: 90%
+        &__title
+            font-size: 3rem
+    .guide-card
+        margin-bottom: 2rem
+
+    .fifth-section
+        height: 1400px
+        padding-bottom: 3rem
+    .feedback
+        flex-direction: column-reverse
+        &__text
+            min-width: 90%
+            justify-content: space-around
+        &:hover figcaption
+            transform: none
+        &:hover img
+            transform: translateY(-10%)
+            filter: none
+        &__img
+            display: flex
+            justify-content: end
+            align-items: center
+            height: 30%
+            border: none
+            width: 90%
+            margin: 0 auto
+        img
+            height: 90%
+            width: auto
+            display: none
+        figcaption
+            text-align: right
+            position: static
+            opacity: 1
+            transform: skew(-4deg)
+
+    .col-white
+        color: black
+
+    .form
+        &-part
+            background: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 80%, rgba(179, 145, 55, 0.3) 50%), url(../img/london-ai.webp) center / cover no-repeat
+        width: 100%
+        input:not([type=radio])
+            width: 90%
+
+    .footer
+        &__ul
+            width: 100%
+
+@media (max-width: 575px)
+    // изменяем корневой шрифт
+    :root
+        font-size: 14px
+
+    .chat
+        width: 5rem
+        height: 5rem
+        img
+            width: 5rem
+            height: 5rem
+    // контейнер
+    .container
+        width: 90%
+
+    // 1я секция
+    .first-section
+        height: 600px
+        &__wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            right: 1vw
+
+    // гамбургер
+    .hamburger
+        position: relative
+        z-index: 3
+
+    .second-section
+        height: auto
+        &__img-part
+            justify-content: center
+            width: 100%
+            img
+                position: static
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: top center
+                transition: 1s
+                &:hover
+                    outline: none
+                    outline-offset: none
+        &__bottom-part
+            margin-bottom: 3rem
+
+    .display-none-575px
+        display: none
+
+    .guide-card
+        &__item
+            grid-column: 2 / 12
+
+    .fifth-section
+        padding: 2.5rem 0
+    .feedback
+        transform: none
+        height: 25%
+        &:nth-child(4)
+            display: none
+        &__img
+            height: auto
+            justify-content: end
+        &__text
+            text-align: center
+            max-width: 90%
+            min-height: 60%
+            p
+                line-height: 1
+                text-align: right
+                font-size: calc(.4rem + 3vw)
+        br
+            display: none
+        &:last-child
+            margin-bottom: 3rem
+
+    .sixth-section
+        &__title
+            font-size: 8vw
+            text-align: center
+
+    .form-part
+        padding: 0 5vw
+    .form__radio:not(:last-child)
+        margin-bottom: 1rem
+
+    .footer
+        height: auto
+        padding-top: 2rem
+        &__text
+            position: relative
+            text-align: center
+            margin-bottom: 1.3rem
+            div:first-child
+                margin-bottom: 1rem
+        img
+            display: none
+        &__ul
+            flex-direction: column
+            li
+                text-align: center
+                margin-bottom: .7rem

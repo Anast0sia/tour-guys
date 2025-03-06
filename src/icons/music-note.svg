@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="music-note">
+  <path fill="none" stroke="#3c3b72" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M23.6,48.39V14.29a2,2,0,0,1,1.65-2L39.19,9.9,52.45,7.59a2,2,0,0,1,2.34,2V45.27"></path>
+  <path fill="#c4c8d1" stroke="#3c3b72" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M54.79,19l-15.6,2.71L23.6,24.37V14.29a2,2,0,0,1,1.65-2L39.19,9.9,52.45,7.59a2,2,0,0,1,2.34,2Z"></path>
+  <circle cx="47.6" cy="46.13" r="7.19" fill="#c4c8d1" stroke="#3c3b72" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></circle>
+  <circle cx="16.4" cy="49.25" r="7.19" fill="#c4c8d1" stroke="#3c3b72" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></circle>
+</svg>

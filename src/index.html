@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .second-section__text {
+        font-weight: 200;
+        line-height: 1.4;
+        span {
+          font-weight: 600;
+        }
+      }
+      .text-1 {}
+      .container {
+        width: 1140px;
+        margin: 0 auto;
+      }
+    </style>
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Экскурсии по Лондону</title>
+    <meta name="description" content="Интересные экскурсии по Лондону">
+    <link rel="shortcut icon" href="icons/london-icon.png" type="image/x-icon">
+    <link rel="preload" as="image" href="img/London.jpg" type="image/jpeg">
+</head>
+<body>
+  <div class="chat">
+    <img src="icons/chat-icon.svg" alt="">
+  </div>
+    <section class="first-section">
+        <div class="container first-section__container">
+          <header class="header">
+            <div class="hamburger-wrapper">
+              <a class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </a></div>
+            <ul class="header__ul">
+              <li><a href="#about-us">О нас</a></li>
+              <li><a href="#catalog">Экскурсии</a></li>
+              <li><a href="#buy">Купить</a></li>
+            </ul>
+            <div class="header__back"></div>
+            <a href="#" class="header__ref"><img src="icons/double bus.svg" alt="Логотип Лондон"></a>
+          </header>
+          <div class="first-section__wrapper">
+            <h1 class="first-section__title title">Лондон</h1>
+            <p class="first-section__text text">столица Великобритании</p>
+            <button class="first-section__button button">Забронировать<br>экскурсию</button>
+          </div>
+        </div>
+    </section>
+
+    <section class="second-section" id="about-us">
+        <div class="container second-section__container">
+          <div class="second-section__top-part">
+            <div class="second-section__text-part">
+              <h2 class="second-section__title title">Кто мы?</h2>
+              <p class="second-section__text text text-1">Мы - <span style="color: rgb(218, 103, 77);">команда</span>, которая поможет выбрать для вас экскурсию <span style="color: rgb(203, 142, 0);">по Лондону</span>! Вы сможете увидеть королевские дворцы, прогуляться по Гайд-парку и местам, связанным с группой The Biatles, посетить музей Гарри Поттера, Британский музей, и <span style="color: rgb(144, 148, 37);">много</span> что еще!</p>
+            </div>
+            <div class="second-section__img-part">
+              <img src="img/guide_1.webp" alt="Экскурсовод" loading="lazy" class="display-none-575px" width="312" > 
+              <img src="img/guide_2.webp" alt="Экскурсовод" loading="lazy" width="355">
+          </div>
+          </div>
+
+          <div class="second-section__bottom-part">
+            <div class="second-section__text-part second-section__bottom-part__text-part">
+              <h2 class="second-section__title title">Создай свой маршрут</h2>
+              <p class="second-section__text text"><span style="color:rgb(80, 61, 84); font-style: italic;">Не нашли маршрут, который вам по душе?</span> У нас <span style="color:rgb(235, 99, 54);">есть</span> решение! Мы не только предлагаем увлекательные экскурсии по Лондону, но и даём вам <span style="color:rgb(89, 145, 22);">возможность</span> стать соавтором собственного маршрута. Для этого просто <a href="#"><span class="second-section__ref">напишите нам</span></a>!</p>
+            </div>
+            <div class="second-section__img-part second-section__bottom-part__img-part">
+              <img src="img/london-1.webp" alt="Экскурсовод" loading="lazy" width="479">
+          </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="third-section" id="catalog">
+      <div class="third-section__container container">
+        <h2 class="third-section__title title">Каталог</h2>
+        <div class="third-section__cards cards">
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/museum.svg" alt="Музей">
+              <h3 class="cards-item__title title_mini">По следам истории</h3>
+              <p class="cards-item__text text_mini">Погрузитесь в мир древних цивилизаций, прогуливаясь по залам Британского музея. Египетские мумии, римские статуи, загадочный Розеттский камень — здесь каждый артефакт хранит тайны прошлого. Ваш гид оживит историю, рассказывая удивительные факты и легенды, которые заставят взглянуть на экспонаты по-новому.</p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/boat.svg" alt="Лодка">
+              <h3 class="cards-item__title title_mini">Тайны Темзы</h3>
+              <p class="cards-item__text text_mini">Отправьтесь в увлекательное речное путешествие по Темзе, где за каждым поворотом скрывается новая страница истории Лондона. Вас ждут легенды старого порта, живописные виды на Тауэрский мост, Биг-Бен и Собор Святого Павла, а также увлекательные рассказы о тайнах и загадках, спрятанных в водах великой реки.</p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/crown.svg" alt="Корона">
+              <h3 class="cards-item__title title_mini">Королевский след</h3>
+              <p class="cards-item__text text_mini">Прогулка по королевским резиденциям Лондона — это возможность прикоснуться к роскоши британской монархии. Вы увидите Букингемский дворец, смену караула у королевской стражи, пройдете по элегантным улочкам Сент-Джеймс и узнаете удивительные истории о правителях, изменивших судьбу Великобритании.</p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/magic-ball.svg" alt="Магия">
+              <h3 class="cards-item__title title_mini">Магия за кулисами</h3>
+              <p class="cards-item__text text_mini">Добро  пожаловать в закулисье волшебного мира! В музее Гарри Поттера вас ждут подлинные декорации, костюмы и реквизит из культовых фильмов. Пройдите по улицам Косого переулка, загляните в Большой зал Хогвартса и узнайте, как создавались самые впечатляющие спецэффекты. </p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/music-note.svg" alt="Нота">
+              <h3 class="cards-item__title title_mini">Лондон: The Beatles</h3>
+              <p class="cards-item__text text_mini">Отправьтесь в музыкальное путешествие по местам, где творилась история легендарной "ливерпульской четверки"! Пройдите по знаменитой пешеходной зебре на Abbey Road, загляните в клубы, где выступали молодые «Битлы», и услышите истории о песнях, которые родились в сердце Лондона.</p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+          <div class="cards-item">
+            <div class="cards-item__side cards-item__side_front">
+              <img src="icons/cloud.svg" alt="Нота">
+              <h3 class="cards-item__title title_mini">Город в облаках</h3>
+              <p class="cards-item__text text_mini">Мы поднимемся на самые захватывающие смотровые площадки города: от стеклянных галерей The Shard до знаменитого колеса обозрения London Eye. Вас ждут панорамные виды на Тауэрский мост, Биг-Бен и Темзу, а также истории о легендарных небоскребах, которые меняли облик столицы.</p>
+            </div>
+            <div class="cards-item__side cards-item__side_back">
+              <h3 class="title_mini">Стоимость экскурсии</h3>
+              <p class="text">100$/ч</p>
+              <button class="cards-item__button button ">Забронировать</button>
+            </div>
+          </div>
+        </div>
+        <div class="third-section__buttons button_prev-after">
+          <img src="icons/arrow-mirror.svg" alt="" class="button_prev">
+          <img src="icons/arrow.svg" alt="" class="button_after">
+        </div>
+      </div>
+    </section>
+
+    <section class="fourth-section">
+      <div class="fourth-section__container container">
+        <h2 class="fourth-section__title title title_medium">Топ-8 наших гидов</h2>
+        <div class="fourth-section__guide-card guide-card">
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Джеймс<br>Андерсон
+            </h3>
+            <img src="img/james.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 9 лет<br>Рейтинг 4.83</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Эмили<br>Лоуренс
+            </h3>
+            <img src="img/emily.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 7 лет<br>Рейтинг 4.77</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Сара<br>Томпсон
+            </h3>
+            <img src="img/sarah.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 4 года<br>Рейтинг 4.91</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Дэвид<br>Миллер
+            </h3>
+            <img src="img/david.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 5 лет<br>Рейтинг 4.73</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Оливия<br>Харрис
+            </h3>
+            <img src="img/olivia.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 10 лет<br>Рейтинг 4.81</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Дэниел<br>Уилсон
+            </h3>
+            <img src="img/daniel.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 8 лет<br>Рейтинг 4.92</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Бенджамин<br>Льюис
+            </h3>
+            <img src="img/benjamin.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 12 лет<br>Рейтинг 4.8</p>
+          </div>
+          <div class="guide-card__item">
+            <h3 class="title_mini guide-card__title">
+              Лили<br>Портер
+            </h3>
+            <img src="img/lily.webp" alt="" loading="lazy">
+            <p class="guide-card__info text_mini">Стаж 3 года<br>Рейтинг 4.95</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fifth-section">
+      <div class="container fifth-section__container">
+       <h2 class="fifth-section__title title">
+        Отзывы клиентов
+       </h2>
+       <div class="fifth-section__feedback feedback">
+        <figure class="feedback__img">
+          <img src="img/woman-1.webp" alt="" loading="lazy">
+          <figcaption class="text_mini">София<br> Колдуэлл</figcaption>
+        </figure>
+        <div class="feedback__text">
+          <h3 class="title title_mini">Магия Гарри Поттера</h3>
+          <p class="text text_mini">Экскурсия в музей Гарри Поттера – это настоящее волшебство! Мы прошлись по Большому залу, заглянули в Хогвартс-Экспресс и увидели сотни оригинальных реквизитов из фильмов. Потрясающая детализация создает ощущение, что ты попал в сказку.</p>
+        </div>
+       </div>
+       <div class="fifth-section__feedback feedback">
+        <figure class="feedback__img">
+          <img src="img/man-2.webp" alt="" loading="lazy">
+          <figcaption class="text_mini col-white">Колин<br> Картер</figcaption>
+        </figure>
+        <div class="feedback__text">
+          <h3 class="title title_mini">Великолепие дворцов</h3>
+          <p class="text text_mini">Посещение Букингемского и Кенсингтонского дворцов оставило незабываемые впечатления! Pоскошные интерьеры поражают воображение, а сады вокруг дворцов просто сказочные. Это то место, которое нужно посетить всем, кто едет в Лондон!</p>
+        </div>
+       </div>
+       <div class="fifth-section__feedback feedback">
+        <figure class="feedback__img">
+          <img src="img/woman-2.webp" alt="" loading="lazy">
+          <figcaption class="text_mini col-white">Сандра<br> Митчелл</figcaption>
+        </figure>
+        <div class="feedback__text">
+          <h3 class="title title_mini">Путешествие в историю</h3>
+          <p class="text text_mini">Британский музей – это сокровищница мировых артефактов! Здесь можно увидеть Розеттский камень, египетские мумии и древнегреческие скульптуры. Атмосфера захватывающая...</p>
+        </div>
+       </div>
+       <div class="fifth-section__feedback feedback">
+        <figure class="feedback__img">
+          <img src="img/man-1.webp" alt="" loading="lazy">
+          <figcaption class="text">Дейв<br> Холлоуэй</figcaption>
+        </figure>
+        <div class="feedback__text">
+          <h3 class="title title_mini">Лондон на высоте</h3>
+          <p class="text text_mini">Подняться на London Eye – это незабываемый опыт! Гигантское колесо обозрения медленно поднимает тебя на высоту, открывая потрясающий вид на Тауэр, Биг-Бен и Темзу. Закат с этой высоты – просто волшебство!</p>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <section class="sixth-section" id="buy">
+      <div class="container sixth-section__container">
+        <div class="sixth-section__form-part form-part">
+          <form action="#" class="form sixth-section__form">
+            <h2 class="title_medium sixth-section__title">
+              <span>Забронировать</span> тур
+            </h2>
+            <div class="form__part">
+              <input type="text" placeholder="Ваше ФИО" id="name" required autocomplete="off">
+              <label for="name" class="text_micro text_mini">Введите ФИО</label>
+            </div>
+            <div class="form__part">
+              <input type="email" placeholder="Ваш email" id="email" required autocomplete="off">
+              <label for="email" class="text_micro text_mini">Введите email</label>
+            </div>
+            <div class="form__radios">
+              <div class="form__radio">
+                <input type="radio" id="individ" name="radio">
+                <span></span>
+                <label for="individ" class="text_mini">Индивидуальный тур</label>
+              </div>
+              <div class="form__radio">
+                <input type="radio" id="group" name="radio">
+                <span></span>
+                <label for="group" class="text_mini">Групповой тур</label>
+              </div>
+            </div>
+            <button class="sixth-section__button button">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__text text_mini">
+          <div><span>Контакты:</span> +7 (800) 172-89-00</div>
+          <div><span>Адрес:</span> Нью-Йорк, улица Тейлор, д.8</div>
+        </div>
+        <a href="#"><img src="icons/double bus.svg" alt="Логотип Лондон"></a>
+        <ul class="footer__ul">
+          <li><a href="#about-us">О нас</a></li>
+          <li><a href="#catalog">Экскурсии</a></li>
+          <li><a href="#buy">Купить</a></li>
+          <li><a href="#">Другие туры...</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
